@@ -1,3 +1,8 @@
+// Import
+// import { accept } from './functions/accept.js'; // TO DO
+
+
+//Data
 const urlParams = new URLSearchParams(window.location.search);
 const recordId = urlParams.get('id'); // Retrieve the value of 'id' parameter from the URL
 
@@ -21,6 +26,8 @@ const quoteTotal = document.querySelector('[k-el="quoteTotal"]');
 const quoteLeasingTotal = document.querySelector('[k-el="quoteLeasingTotal"]');
 
 const loader = document.querySelector('[k-el="pageLoader"]'); // Page Loader
+
+const acceptBtn = document.querySelector('[k-el="acceptBtn"]');
 
   // Hide the template card initially
   template.classList.add('hidden');
@@ -122,3 +129,6 @@ fetch('https://api.airtable.com/v0/app6plHG3XaIeXYUe/Tarjousrivit?filterByFormul
       });
     });
 };
+
+
+
