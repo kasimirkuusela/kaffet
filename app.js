@@ -5,9 +5,9 @@ const linesTable = "tblFxXEAKeBm6RvOx"; // Get Products
 const recordId = "recQ5czZ0oDDoyrbU"; // Use CMS field here
 
 // Elements
-const quoteTitle = document.querySelector('[k-el="quoteTitle"]');
-const quoteDescription = document.querySelector('[k-el="quoteDescription"]');
-const clientCompany = document.querySelector('[k-el="quoteDescription"]');
+const quoteTitle = document.querySelector('[k-el="quoteTitle"]'); // Quote Title
+const quoteDescription = document.querySelector('[k-el="quoteDescription"]'); // Quote Description
+const loader = document.querySelector('[k-el="pageLoader"]'); // Page Loader
 
 // Replace Base ID, TABLE & API key
 window.onload = function() {
@@ -45,8 +45,8 @@ window.onload = function() {
     })
     // Hide Loader When Everything Is Loaded
     .then(() => {
-      document.querySelector("#content").classList.remove("hidden");
-      document.querySelector("#content-loader").classList.add("hidden");
+      loader.classList.remove("hidden");
+      loader.classList.add("hidden");
       console.log("Content loaded");
     })
     .catch(error => {
