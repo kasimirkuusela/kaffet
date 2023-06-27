@@ -77,6 +77,11 @@ window.onload = function() {
       } else {
         quoteTotal.parentElement.classList.add('hidden');
       }
+      if (json.fields['Leasinghinta yhteensä']) {
+        quoteLeasingTotal.textContent = json.fields['Leasinghinta yhteensä'];
+      } else {
+        quoteLeasingTotal.parentElement.classList.add('hidden');
+      }
       loader.classList.add('hidden');
       console.log("Content loaded");
     })
