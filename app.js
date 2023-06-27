@@ -100,6 +100,7 @@ fetch('https://api.airtable.com/v0/app6plHG3XaIeXYUe/Tarjousrivit?filterByFormul
           newItem.querySelector('[k-el="itemGuarantee"]').textContent = item.fields['Takuu']; // Product Guarantee
           newItem.querySelector('[k-el="addOnsTotal"]').textContent = item.fields['Lisävarusteet yhteensä']; // Add-Ons Total Price
           newItem.querySelector('[k-el="maintenance"]').textContent = item.fields['Huoltosopimus']; // Add-Ons Total Price
+          newItem.querySelector('[k-el="amount"]').textContent = item.fields['Määrä']; // Quantity
           // Set the image source
         const itemImg = newItem.querySelector('[k-el="itemImg"]');
         itemImg.src = item.fields['Pääkuva'][0].url;
