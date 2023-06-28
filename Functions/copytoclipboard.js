@@ -12,7 +12,7 @@ function copyURLToClipboard() {
       copyBtnText.textContent = 'Kopioitu!';
       setTimeout(() => {
         // Reset the copy button text after 5 seconds
-        copyBtnText.textContent = 'Default Text';
+        copyBtnText.textContent = 'Kopioi linkki';
       }, 5000);
     })
     .catch((error) => {
