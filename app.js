@@ -120,7 +120,7 @@ fetch('https://api.airtable.com/v0/app6plHG3XaIeXYUe/Tarjousrivit?filterByFormul
           newItem.querySelector('[k-el="itemDescription"]').textContent = item.fields['Kuvaus']; // Product Description
           newItem.querySelector('[k-el="itemPrice"]').textContent = item.fields['Hinta']; // Product Price
           newItem.querySelector('[k-el="itemTotal"]').textContent = item.fields['Yhteensä']; // Product Price Total With Add-Ons
-          newItem.querySelector('[k-el="itemLeasingPrice"]').textContent = item.fields['Leasinghinta']; // Product Leasing Price
+          newItem.querySelector('[k-el="itemLeasingPrice"]').textContent = item.fields['Leasing yhteensä']; // Product Leasing Price
           newItem.querySelector('[k-el="itemGuarantee"]').textContent = item.fields['Takuu']; // Product Guarantee
           newItem.querySelector('[k-el="addOnsTotal"]').textContent = item.fields['Lisävarusteet yhteensä']; // Add-Ons Total Price
           newItem.querySelector('[k-el="maintenance"]').textContent = item.fields['Huoltosopimus']; // Add-Ons Total Price
