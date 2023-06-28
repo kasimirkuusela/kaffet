@@ -23,7 +23,9 @@ const template = document.querySelector('[k-el="lineItem"]'); // Get the templat
 const lineItems = document.querySelector('[k-el="lineItemsWrapper"]'); // Line Items Wrapper
 const lineItemsContainer = lineItems.parentNode; // Use parentNode directly
 const quoteTotal = document.querySelector('[k-el="quoteTotal"]');
-const quoteLeasingTotal = document.querySelector('[k-el="quoteLeasingTotal"]');
+const quoteLeasingTotal = document.querySelector('[k-el="leasingTotal"]');
+const leasingPeriod = document.querySelector('[k-el="leasingPeriod"]');
+const contactPerson = document.querySelector('[k-el="contactPerson"]');
 
 const loader = document.querySelector('[k-el="pageLoader"]'); // Page Loader
 
@@ -81,6 +83,16 @@ window.onload = function() {
         quoteLeasingTotal.textContent = json.fields['Leasinghinta yhteensä'];
       } else {
         quoteLeasingTotal.parentElement.classList.add('hidden');
+      }
+      if (json.fields['Sopimuskausi']) {
+        leasingPeriod.textContent = json.fields['Sopimuskausi'];
+      } else {
+        leasingPeriod.parentElement.classList.add('hidden');
+      }
+      if (json.fields['Myyjä']) {
+        contactPerson.textContent = json.fields['Myyjä'].name;
+      } else {
+        contactPerson.parentElement.classList.add('hidden');
       }
       loader.classList.add('hidden');
       console.log("Content loaded");
